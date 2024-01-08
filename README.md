@@ -1,14 +1,44 @@
-#NFT Marketplace  Real world assets
-Certainly! NFT, or non-fungible token, represents a unique digital asset that is stored on a blockchain. NFT marketplaces are platforms where individuals can buy, sell, and trade these digital assets. These marketplaces typically support a variety of NFTs including digital art, collectibles, domain names, virtual real estate, and more.
+# NFT_Marketplace
+ An NFT marketplace is a digital platform for buying and selling NFTs. These platforms allow people to store and display their NFTs plus sell them to others for cryptocurrency or money. Some NFT marketplaces also allow users to mint their NFTs on the platform itself.
 
-When exploring an NFT marketplace, it's essential to consider factors such as:
+# Advanced Sample Hardhat Project
 
-Supported Cryptocurrencies: Many NFT marketplaces accept various cryptocurrencies as a form of payment, such as Ethereum (ETH) or other compatible tokens.
+This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
 
-User Interface and Experience: A user-friendly interface can significantly impact the overall experience of browsing, purchasing, and managing NFTs.
+The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
 
-Security and Authenticity: It's crucial for NFT marketplaces to implement robust security measures to ensure the authenticity and ownership of the digital assets.
+Try running some of the following tasks:
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+npx hardhat help
+REPORT_GAS=true npx hardhat test
+npx hardhat coverage
+npx hardhat run scripts/Deployment.js
+node scripts/Deployment.js
+npx eslint '**/*.js'
+npx eslint '**/*.js' --fix
+npx prettier '**/*.{json,sol,md}' --check
+npx prettier '**/*.{json,sol,md}' --write
+npx solhint 'contracts/**/*.sol'
+npx solhint 'contracts/**/*.sol' --fix
+```
 
-Community and Support: Engaging communities and reliable customer support are valuable aspects to consider when choosing an NFT marketplace.
+# Etherscan verification
 
-When using an NFT marketplace, users should exercise caution and conduct thorough research to understand the terms of use, transaction fees, and potential risks associated with buying and selling NFTs.
+To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
+
+In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+
+```shell
+hardhat run --network ropsten scripts/deploy.js
+```
+
+Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+
+```shell
+npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
+```
