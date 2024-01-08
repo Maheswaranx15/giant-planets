@@ -1,4 +1,4 @@
-##NFT Marketplace  Real world assets
+#NFT Marketplace  Real world assets
 Certainly! NFT, or non-fungible token, represents a unique digital asset that is stored on a blockchain. NFT marketplaces are platforms where individuals can buy, sell, and trade these digital assets. These marketplaces typically support a variety of NFTs including digital art, collectibles, domain names, virtual real estate, and more.
 
 When exploring an NFT marketplace, it's essential to consider factors such as:
